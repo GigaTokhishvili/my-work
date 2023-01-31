@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: rgb(58, 58, 58);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,11 @@ body {
     color:whitesmoke;
     text-decoration: none;
     cursor: pointer;
+}
+
+.disk i:hover {
+    transform: scale(1.1);
+    transition: 400ms;
 }
 
 #work {
@@ -57,7 +62,7 @@ body {
     font-size:40px;
     color:white;
     bottom:20px;
-    right:85px; 
+    right:95px; 
 }
 
 #emojiGen {
@@ -75,4 +80,14 @@ body {
     bottom:20px;
     left: 35px;
     color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainText {
+    user-select: none;
+    width:500px;
+    margin-left: 100px;
+    color:white;
+    font-size:45px;
+    font-family: Arial, Helvetica, sans-serif;
 }

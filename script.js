@@ -1,3 +1,4 @@
+//the Rotation
 const disk = document.querySelector('.disk');
 
 let isDown = false;
@@ -52,3 +53,27 @@ emojiButton.addEventListener('click', ()=> {
     emojiButton.innerHTML = emojis[rand];
 })
 
+// the items 
+const work = document.getElementById('work');
+const photography = document.getElementById('photography');
+// const body = document.querySelector('body');
+// if (!isDown) {
+//     work.addEventListener('click', ()=> {
+//         const newSpan = document.createElement('span');
+//         body.appendChild(newSpan);
+//         newSpan.innerText = 'Sorry the work still in progress';
+//         newSpan.style.fontFamily = 'Arial, Helvetica, sans-serif';
+//         newSpan.style.fontSize = '20px';
+//         newSpan.style.color = 'white';
+//         newSpan.style.position = 'absolute';
+//         const {top, left} = work.getBoundingClientRect();
+//         newSpan.style.top = `${top}px`;
+//         newSpan.style.left = `${left}px`;
+//     }, {once : true});    
+// }
+work.addEventListener('click', ()=> {
+    alert('Sorry the work is still in progress');
+});
+photography.addEventListener('click', ()=> {
+    alert('Will be done very soon');
+});
