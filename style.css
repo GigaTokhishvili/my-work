@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.disk {
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    cursor:grabbing;
+    transition: 50ms;
+}
+
+.disk a {
+    position:absolute;
+    font-size:100px;
+    color:whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#work {
+    bottom:0;
+    transform: rotate(180deg);
+}
+
+#commerce {
+    left:0px;
+    top:250px;
+    transform: rotate(-90deg);
+}
+
+#photography{
+    right:0;
+    top:250px;
+    transform: rotate(90deg);
+}
+
+#about {
+    top: 0px;
+}
+
+#mainCode {
+    position:absolute;
+    font-size:40px;
+    color:white;
+    bottom:20px;
+    right:85px; 
+}
+
+#emojiGen {
+    position:absolute;
+    font-size:40px;
+    color:gold;
+    bottom: 20px;
+    right: 35px;
+    cursor:pointer;
+    transition: 1000ms;
+}
+
+#text {
+    position:absolute;
+    bottom:20px;
+    left: 35px;
+    color:white;
+}
