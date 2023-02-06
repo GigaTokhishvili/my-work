@@ -2,14 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
-    background-color: rgb(58, 58, 58);
     display:flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image:url(/stuff/layered-waves-haikei\ \(1\).svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
 }
 
 .disk {
@@ -20,13 +24,13 @@ body {
     display:flex;
     justify-content: center;
     cursor:grabbing;
-    transition: 50ms;
+    transition: 100ms;
 }
 
 .disk a {
     position:absolute;
     font-size:100px;
-    color:whitesmoke;
+    color:white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -34,6 +38,7 @@ body {
 .disk i:hover {
     transform: scale(1.1);
     transition: 400ms;
+    color:#d9b08c;
 }
 
 #work {
@@ -59,20 +64,27 @@ body {
 
 #mainCode {
     position:absolute;
-    font-size:40px;
-    color:white;
+    font-size:30px;
+    color: #001220;
     bottom:20px;
     right:95px; 
+}
+#mainCode:hover {
+    color:white;
+    transition: 400ms;
 }
 
 #emojiGen {
     position:absolute;
-    font-size:40px;
-    color:gold;
+    font-size:30px;
+    color:#001220;
     bottom: 20px;
     right: 35px;
     cursor:pointer;
-    transition: 1000ms;
+}
+#emojiGen:hover {
+    color:white;
+    transition: 400ms;
 }
 
 #text {
@@ -80,14 +92,16 @@ body {
     bottom:20px;
     left: 35px;
     color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 
 #mainText {
-    user-select: none;
-    width:500px;
+    width:430px;
     margin-left: 100px;
-    color:white;
+    padding:15px 0 0 20px;
+    color:#d9b08c;
     font-size:45px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: -1px -1px white;
 }
