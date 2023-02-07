@@ -6,6 +6,7 @@
 }
 
 body {
+    background-color: #001220;
     display:flex;
     justify-content: center;
     align-items: center;
