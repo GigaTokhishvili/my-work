@@ -11,7 +11,6 @@ disk.addEventListener('mousedown', (e) => {
     setTimeout(() => {
         e.preventDefault;
         isDown = true;
-        disk.style.pointerEvents = 'none';
         startX = e.clientX;
         startY = e.clientY;
     }, 100)
@@ -26,7 +25,7 @@ document.body.addEventListener('mousemove', (e) => {
 
         angle = Math.atan2(currentY - startY, currentX - startX) * 180 / Math.PI;
         
-        disk.style.transform = `rotate(${angle + lastRotation}deg)`;
+        disk.style.transform = `rotate(${(angle + lastRotation) * 2}deg)`;
     }
     console.log(angle);
 })
