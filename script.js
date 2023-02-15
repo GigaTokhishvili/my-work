@@ -1,39 +1,33 @@
 //the Rotation
 const disk = document.querySelector('.disk');
 
-let isDown = false;
-let lastRotation = 0;
-let angle = 0;
-
-let startX, currentX, startY, currentY;
+let isDown = false,
+    initialAngle = 0,
+    angle = 0, 
+    currentX, 
+    currentY,
+    center = 300;
 
 disk.addEventListener('mousedown', (e) => {
-    setTimeout(() => {
         e.preventDefault;
         isDown = true;
-        startX = e.clientX;
-        startY = e.clientY;
-    }, 100)
 })
 
 document.body.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     
     if (e.buttons === 1) {
-        currentX = e.clientX;
-        currentY = e.clientY;
+        currentX = e.clientX - disk.offsetLeft - center;
+        currentY = e.clientY - disk.offsetTop - center;
 
-        angle = Math.atan2(currentY - startY, currentX - startX) * 180 / Math.PI;
-        
-        disk.style.transform = `rotate(${(angle + lastRotation) * 2}deg)`;
+        angle = Math.atan2(currentY, currentX) * 180 / Math.PI;
+        disk.style.transform = `rotate(${angle + initialAngle}deg)`;
     }
-    console.log(angle);
 })
 
 document.body.addEventListener('mouseup', () => {
     isDown = false;
-    disk.style.pointerEvents = 'auto';
-    lastRotation += angle;
+    initialAngle += angle;
 })
 
 // emoji generator 
