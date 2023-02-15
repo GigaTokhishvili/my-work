@@ -13,7 +13,7 @@ https://gigatokhishvili.github.io/my-work/ ;
 
 # Possibilities:
 1. The main div in the middle is rotatable (or at least it should be).
-2. You can click on each icon to see a preview of the website it corresponds to;
+2. (not yet)You can click on each icon to see a preview of the website it corresponds to;
 3. The icons at the bottom right are also clickable;
 
 # Issues and things I learned:
