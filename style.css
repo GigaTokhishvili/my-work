@@ -1,3 +1,8 @@
+:root {
+    --main-color: #001220;
+    --detail-color: #d9b08c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-    background-color: #001220;
+    background-color: var(--main-color);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +30,7 @@ body {
     display:flex;
     justify-content: center;
     cursor:grabbing;
+    animation: rotate 1000ms ease;
 }
 
 .disk a {
@@ -38,7 +44,7 @@ body {
 .disk i:hover {
     transform: scale(1.1);
     transition: 300ms;
-    color:#d9b08c;
+    color: var(--detail-color);
 }
 
 #work {
@@ -65,7 +71,7 @@ body {
 #mainCode {
     position:absolute;
     font-size:30px;
-    color: #001220;
+    color: var(--main-color);
     bottom:20px;
     right:95px; 
 }
@@ -77,7 +83,7 @@ body {
 #emojiGen {
     position:absolute;
     font-size:30px;
-    color:#001220;
+    color:var(--main-color);
     bottom: 20px;
     right: 35px;
     cursor:pointer;
@@ -87,7 +93,7 @@ body {
     transition: 400ms;
 }
 
-#text {
+#meText {
     position:absolute;
     bottom:20px;
     left: 35px;
@@ -100,8 +106,49 @@ body {
     width:430px;
     margin-left: 100px;
     padding:15px 0 0 20px;
-    color:#d9b08c;
+    color:var(--detail-color);
     font-size:45px;
     font-family: 'Montserrat', sans-serif;
     box-shadow: -1px -1px white;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-360deg);
+    }
+    70% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media all and (max-width: 450px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    .disk {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .disk a {
+        font-size: 50px;
+    }
+
+    #commerce {
+        top:120px;
+    }
+    #photography{
+        top:120px;
+    }
+
+    #mainText {
+        position:absolute;
+        top: 10px;
+        font-size: 20px;
+    }
+
 }

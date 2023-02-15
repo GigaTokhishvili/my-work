@@ -49,6 +49,7 @@ emojiButton.addEventListener('click', ()=> {
     newSpan.style.right = '20px';
     newSpan.style.fontSize = "'Montserrat', sans-serif'";
     body.appendChild(newSpan);
+    emojiButton.style.color = 'white';
 })
 
 // the items 
