@@ -146,9 +146,26 @@ body {
     }
 
     #mainText {
+        margin-left: 0;
+        width: 300px;
         position:absolute;
         top: 10px;
         font-size: 20px;
     }
 
+    #meText {
+        left: 10px;
+        bottom: 10px;
+        font-size: 0.7em;
+    }
+
+    #emojiGen {
+        right: 10px;
+        bottom:10px;
+    }
+
+    #mainCode {
+        right: 60px;
+        bottom: 8px;
+    }
 }

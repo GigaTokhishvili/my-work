@@ -1,13 +1,15 @@
-//the Rotation
+//The Rotation
 const disk = document.querySelector('.disk');
 
 let isDown = false,
-    initialAngle = 0,
-    angle = 0, 
+    previousAngle = 0,
+    angle = 0,
     currentX, 
     currentY,
     center = 300;
 
+
+//for pcs
 disk.addEventListener('mousedown', (e) => {
         e.preventDefault;
         isDown = true;
@@ -21,14 +23,41 @@ document.body.addEventListener('mousemove', (e) => {
         currentY = e.clientY - disk.offsetTop - center;
 
         angle = Math.atan2(currentY, currentX) * 180 / Math.PI;
-        disk.style.transform = `rotate(${angle + initialAngle}deg)`;
+        disk.style.transform = `rotate(${angle}deg)`;
+        console.log(angle);
     }
 })
 
 document.body.addEventListener('mouseup', () => {
     isDown = false;
-    initialAngle += angle;
+    previousAngle = angle;
 })
+
+//for phones
+if (window.matchMedia('(max-width: 450px)').matches) {
+    disk.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    isDown = true;
+});
+  
+document.body.addEventListener("touchmove", (e) => {
+    if (!isDown) return;
+  
+    if (e.touches.length === 1) {
+      currentX = e.touches[0].clientX - disk.offsetLeft - 150;
+      currentY = e.touches[0].clientY - disk.offsetTop - 150;
+  
+      angle = (Math.atan2(currentY, currentX) * 180) / Math.PI;
+      disk.style.transform = `rotate(${angle}deg)`;
+    }
+});
+
+document.body.addEventListener("touchend", () => {
+    isDown = false;
+    previousAngle = angle;
+});
+}
+
 
 // emoji generator 
 const body = document.querySelector('body');
