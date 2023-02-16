@@ -124,6 +124,24 @@ body {
     }
 }
 
+
+@media all and (max-width: 1400px) {
+    .disk {
+        width:400px;
+        height:400px;
+    }
+
+    .disk a {
+        font-size: 70px;
+    }
+
+    #commerce {
+        top:160px;
+    }
+    #photography {
+        top:160px;
+    }
+}
 @media all and (max-width: 450px) {
     body {
         width: 100%;
