@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: 'Montserrat', sans-serif
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     background-size:cover;
     background-repeat: no-repeat;
     background-position:bottom;
+    overflow: hidden;
 }
 
 .disk {
@@ -68,6 +70,91 @@ body {
     top: 0px;
 }
 
+#emailButton {
+    position:absolute;
+    font-size:30px;
+    color:var(--main-color);
+    bottom: 20px;
+    right: 35px;
+    cursor:pointer;
+}
+#emailButton:hover {
+    color:white;
+    transition: 400ms;
+}
+
+.emailForm {
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+.visible {
+    transform: translateY(0);
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.contactTop {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contactHeader {
+    margin-top: 10px;
+}
+
+#closeButton {
+    font-size:28px;
+    cursor: pointer;
+}
+
+.inputDiv {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+}
+
+.inputDiv > input, textarea {
+    width: 100%;
+    margin-top: 5%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-weight:1000;
+    outline: 0;
+}
+
+textarea {
+    height: 80px;
+}
+
+#submitButton {
+    width: 100px;
+    height: 30px;
+    margin: 7% 0;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 #mainCode {
     position:absolute;
     font-size:30px;
@@ -76,19 +163,6 @@ body {
     right:95px; 
 }
 #mainCode:hover {
-    color:white;
-    transition: 400ms;
-}
-
-#emojiGen {
-    position:absolute;
-    font-size:30px;
-    color:var(--main-color);
-    bottom: 20px;
-    right: 35px;
-    cursor:pointer;
-}
-#emojiGen:hover {
     color:white;
     transition: 400ms;
 }
@@ -141,12 +215,15 @@ body {
     #photography {
         top:160px;
     }
+
+    .emailForm {
+        height:50%;
+    }
+    .contactTop {
+        width:80%;
+    }
 }
 @media all and (max-width: 450px) {
-    body {
-        width: 100%;
-        height: 100%;
-    }
     .disk {
         width: 300px;
         height: 300px;
@@ -176,14 +253,23 @@ body {
         bottom: 10px;
         font-size: 0.7em;
     }
+    
+    #mainCode {
+        right: 60px;
+        bottom: 8px;
+    }
 
-    #emojiGen {
+    #emailButton {
         right: 10px;
         bottom:10px;
     }
 
-    #mainCode {
-        right: 60px;
-        bottom: 8px;
+    .emailForm {
+        width:100%;
+        z-index: 100;
+    }
+
+    textarea {
+        margin-top: 50px;
     }
 }
