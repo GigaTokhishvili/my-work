@@ -255,11 +255,13 @@ textarea {
     }
     
     #mainCode {
+        color:white;
         right: 60px;
         bottom: 8px;
     }
 
     #emailButton {
+        color: white;
         right: 10px;
         bottom:10px;
     }
