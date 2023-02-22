@@ -32,7 +32,7 @@ body {
     display:flex;
     justify-content: center;
     cursor:grabbing;
-    animation: rotate 1000ms ease;
+    transition: 100ms;
 }
 
 .disk a {
@@ -56,13 +56,13 @@ body {
 
 #commerce {
     left:0px;
-    top:250px;
+    top:235px;
     transform: rotate(-90deg);
 }
 
 #photography{
     right:0;
-    top:250px;
+    top:235px;
     transform: rotate(90deg);
 }
 
@@ -186,17 +186,6 @@ textarea {
     box-shadow: -1px -1px white;
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(-360deg);
-    }
-    70% {
-        transform: rotate(30deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
 
 
 @media all and (max-width: 1400px) {
@@ -255,11 +244,13 @@ textarea {
     }
     
     #mainCode {
+        color:white;
         right: 60px;
         bottom: 8px;
     }
 
     #emailButton {
+        color: white;
         right: 10px;
         bottom:10px;
     }
