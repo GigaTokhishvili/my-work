@@ -5,6 +5,7 @@
 1. html
 2. css
 3. js;
+4. GSAP;
 
 
 # Link:
@@ -19,6 +20,7 @@ https://gigatokhishvili.github.io/my-work/ ;
 
 # Issues and things I learned:
 1. The rotation. Initially it was a simple rotation based on the x position of the initial mouse click and current mouse position. Figured out I could use Math.atan2 to calculate the angle and implemented that method;
+Finally I stumpled upon GreenSock... what a relief;
 2. Select. The div in the background the text and the icons were getting selected. Learned about 'user-select: none' and e.preventDefault;
 3. Learned how to use animations;
-4. Learned how to create a functional contact form;
+4. Learned how to implement a functional contact form;
