@@ -31,7 +31,7 @@ body {
     position:relative;
     display:flex;
     justify-content: center;
-    cursor:grabbing;
+    cursor: default;
     transition: 100ms;
 }
 
